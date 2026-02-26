@@ -1,5 +1,6 @@
-# PowerApps-Shimmer-UI-PCF-Component
-Modern Skeleton Loading States for Canvas and Model-Driven Apps
+# SunilP-PowerApps-Shimmer 
+
+Modern Skeleton Loading States for Canvas and Model-Driven Apps (PowerApps-Shimmer-UI-PCF-Component)
 
 # 🚀 Ultra-Light Shimmer PCF
 **The Zero-Dependency Skeleton Loader for Power Apps**
