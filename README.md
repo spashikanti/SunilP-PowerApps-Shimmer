@@ -2,8 +2,10 @@
 
 Modern Skeleton Loading States for Canvas and Model-Driven Apps (PowerApps-Shimmer-UI-PCF-Component)
 
-# 🚀 Ultra-Light Shimmer PCF
-**The Zero-Dependency Skeleton Loader for Power Apps**
+# 🚀 PowerShimmerUltraLight
+**The Zero-Dependency, High-Performance Skeleton Loader for Power Apps**
+
+Part of the **SunilP.PowerApps-PCF** suite. This component replaces heavy Creator Kit dependencies with a native, ultra-lightweight CSS animation.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![Power Platform](https://img.shields.io/badge/Platform-Power%20Platform-blue)
@@ -30,7 +32,7 @@ While Microsoft provides a Shimmer control within the **Power CAT Creator Kit**,
 * **Dynamic Theming:** Bind the background and highlight colors to your App's global theme variables.
 
 ## 🚀 Installation & Usage
-1.  **Download:** Grab the latest managed solution from the [Releases](../../releases) section.
+1.  **Download:** Grab the latest managed solution `PowerShimmerUltraLight.zip` from the [Releases](../../releases) section.
 2.  **Import:** Import the `.zip` file into your Power Platform environment.
 3.  **Implement:**
     * Place the Shimmer over your Data Gallery or Form.
