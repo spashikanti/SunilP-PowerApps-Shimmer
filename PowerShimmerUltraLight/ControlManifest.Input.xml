@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="SunilP" constructor="PowerShimmerUltraLight" version="1.0.0" display-name-key="SunilP Power Shimmer" 
+  description-key="Ultra-lightweight skeleton loading effect." control-type="standard">
+    
+    <property name="BackgroundColor" display-name-key="Background Color" description-key="The base color (e.g., #F3F2F1)" of-type="SingleLine.Text" usage="bound" required="true" />
+    <property name="HighlightColor" display-name-key="Highlight Color" description-key="The moving shine color (e.g., #E1E1E1)" of-type="SingleLine.Text" usage="bound" required="true" />
+    <property name="AnimationSpeed" display-name-key="Animation Speed (s)" description-key="Duration in seconds (default 1.5)" of-type="Decimal" usage="bound" required="false" />
+    <property name="CornerRadius" display-name-key="Corner radius (px)" description-key="Corner radius in pixels for rounded rectangle (default 8)"
+              of-type="Decimal" usage="bound" required="false" />
+    <property name="ShapeType" display-name-key="Shape Type" description-key="Rectangle (sharp), Rounded (loading placeholder), or Circle (avatar)" of-type="Enum" usage="bound" required="true">
+      <value name="Rectangle" display-name-key="Rectangle">0</value>
+      <value name="Circle" display-name-key="Circle">1</value>
+      <value name="RoundedRectangle" display-name-key="Rounded rectangle">2</value>
+    </property>
+    <resources>
+      <code path="index.ts" order="1"/>
+      <css path="css/PowerShimmerUltraLight.css" order="2"/>
+    </resources>
+  </control>
+</manifest>

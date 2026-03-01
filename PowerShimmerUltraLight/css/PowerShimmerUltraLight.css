@@ -1,0 +1,63 @@
+/* PCF root container: fill host area and establish positioning context */
+.shimmer-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100% !important;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.shimmer-element {
+    height: 100%;
+    background-size: 200% 100%;
+    animation: shimmer-animation linear infinite;
+    flex-shrink: 0;
+}
+
+@keyframes shimmer-animation {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+.shimmer-rectangle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 0;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.shimmer-rectangle-rounded {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 8px; /* default; overridden when CornerRadius is set */
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.shimmer-circle {
+    aspect-ratio: 1 / 1;
+    border-radius: 50% !important;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
