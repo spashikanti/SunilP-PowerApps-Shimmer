@@ -1,48 +1,63 @@
-# SunilP-PowerApps-Shimmer 
+# 💎 PowerShimmer Ultra-Light
+> **A high-performance, zero-dependency skeleton loader for professional Power Apps.**
 
-Modern Skeleton Loading States for Canvas and Model-Driven Apps (PowerApps-Shimmer-UI-PCF-Component)
-
-# 🚀 PowerShimmerUltraLight
-**The Zero-Dependency, High-Performance Skeleton Loader for Power Apps**
-
-Part of the **SunilP.PowerApps-PCF** suite. This component replaces heavy Creator Kit dependencies with a native, ultra-lightweight CSS animation.
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-![Power Platform](https://img.shields.io/badge/Platform-Power%20Platform-blue)
-![PCF](https://img.shields.io/badge/Type-PCF%20Control-orange)
+![PowerShimmer Demo](./SunilP-PowerApps-Shimmer.gif)
 
 ## 🧐 Why this instead of the Microsoft Creator Kit?
-While Microsoft provides a Shimmer control within the **Power CAT Creator Kit**, many enterprise environments and independent developers face significant friction using it. This project solves these specific "Real-World" pain points:
+While Microsoft provides a Shimmer in the **Power CAT Creator Kit**, it introduces significant friction for many environments:
 
-| Feature | Microsoft Creator Kit Shimmer | **Ultra-Light Shimmer (This Repo)** |
-| :--- | :--- | :--- |
-| **Dependencies** | Requires the entire Creator Kit (~20MB+). | **Zero Dependencies.** Single PCF import. |
-| **Setup** | Complex Power Fx Table definitions. | **Plug & Play.** Drag, drop, and resize. |
-| **Performance** | Heavy Fluent UI wrapper overhead. | **Native CSS.** Ultra-low memory footprint. |
-| **Customization** | Locked to Fluent UI design system. | **Full Branding.** Custom hex colors & speeds. |
-
-
-
-## 🛠️ Key Technical Features
-* **SVG-Powered:** Uses optimized SVGs to prevent pixelation on high-res displays.
-* **Variable Pulse Logic:** Easily adjust the `ShimmerSpeed` to match your app's "feel."
-* **Shape Variants:**
-    * `Rectangular`: For headers, body text, and cards.
-    * `Circular`: For profile avatars and action buttons.
-* **Dynamic Theming:** Bind the background and highlight colors to your App's global theme variables.
-
-## 🚀 Installation & Usage
-1.  **Download:** Grab the latest managed solution `PowerShimmerUltraLight.zip` from the [Releases](../../releases) section.
-2.  **Import:** Import the `.zip` file into your Power Platform environment.
-3.  **Implement:**
-    * Place the Shimmer over your Data Gallery or Form.
-    * Set Shimmer `Visible` property to `!varDataLoaded`.
-    * Set Gallery/Form `Visible` property to `varDataLoaded`.
-
-## 🤝 Community & Contribution
-As a **Power Platform Community Moderator** and **Super User**, I built this to solve a specific performance and deployment bottleneck identified in the community forums. 
-
-If you have ideas for new animation patterns (e.g., "wave" vs "pulse"), feel free to open a Pull Request!
+- **Heavy Dependencies:** Requires importing the entire Creator Kit (~20MB+ solution overhead).
+- **Setup Friction:** Requires complex Power Fx Table definitions just to render a simple box.
+- **Performance:** Built on heavy wrappers. **PowerShimmer Ultra-Light** uses native CSS GPU-accelerated animations.
 
 ---
-**Created by [Sunil Kumar Pashikanti](https://sunilpashikanti.com)** *Principal Architect | Power Platform Super User*
+
+## 📊 Comparison: Why go Ultra-Light?
+
+| Feature | Microsoft Creator Kit | **PowerShimmer Ultra-Light** |
+| :--- | :--- | :--- |
+| **Weight** | ~20MB Environment Bloat | **Featherweight (< 50KB)** |
+| **Setup** | Complex Table Logic | **Drag, Drop & Resize** |
+| **Performance** | Fluent UI Overhead | **Native CSS3 Animations** |
+| **Dependencies** | Requires Full Kit | **Stand-alone PCF** |
+
+---
+
+## ✨ Key Features
+- **🚀 Ultra-Lightweight:** Native CSS. No bulky JavaScript libraries.
+- **🎨 Full Branding:** Custom hex colors for Background and Highlights
+- **📐 Shape Variants:** Support for **Rectangle** (Cards/Tables) and **Circle** (Profile Avatars).
+- **⚡ No Pixelation:** Optimized rendering for high-resolution displays.
+
+---
+
+## 🚀 Quick Start (Installation & Usage)
+
+### 1. Locate the Solution
+- Download the `PowerShimmerSolution.zip` located in the `/SolutionPackage` folder of this repository. 
+- *Note: This is an **unmanaged** solution, allowing you to inspect or extend the code directly in your environment.*
+
+### 2. Import to Power Platform
+- Go to [make.powerapps.com](https://make.powerapps.com) > **Solutions**.
+- Click **Import Solution** and select the `.zip` file.
+- **⚠️ Troubleshooting Warnings:** You may see a message regarding "Critical Violations" or "Solution Checker." This is a standard warning for custom code components (PCF). It is safe to click **Next** and proceed with the import.
+- Once complete, click **Publish all customizations**.
+
+### 3. Enable in your Canvas App
+- In the App Editor, click the **+ (Insert)** icon > **Get more components**.
+- Select the **Code** tab, find **PowerShimmerUltraLight**, and click **Import**.
+- The component will now appear under the **Code components** section of your Insert pane.
+
+
+
+### 4. Implementation Pattern
+Place the Shimmer over your Gallery or Table and set:
+- **Visible:** `varIsLoading`
+- **ShapeType:** `0` (Rectangle) or `1` (Circle)
+
+**The "Super User" Loading Logic:**
+```powerapps
+// OnSelect of your Navigation or Refresh Button
+Set(varIsLoading, true); 
+Refresh('YourDataSource'); 
+Set(varIsLoading, false);
